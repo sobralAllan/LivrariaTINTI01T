@@ -7,10 +7,10 @@
     class Pessoa{
         //Encapsular as variáveis
         //Declaração de Variáveis
-        private string $cpf;
-        private string $nome;
-        private string $telefone;
-        private string $endereco;
+        protected string $cpf;
+        protected string $nome;
+        protected string $telefone;
+        protected string $endereco;
 
         //Instanciar = dar um valor inicial
         //Método Construtor

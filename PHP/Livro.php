@@ -117,7 +117,7 @@
         public function calcularTotal():float
         {
             $this->setTotal($this->getPrecoUnitario() * $this->getQuantidade());
-            $this->getTotal();
+            //$this->getTotal();
         }//fim do método   
 
         public function imprimir():string
@@ -126,10 +126,10 @@
                    "<br>Titulo: ".$this->getTitulo().
                    "<br>Autor: ".$this->getAutor().
                    "<br>Edição: ".$this->getEdicao().
-                   "<br>Data de Lançamento: ".$this->getDtLancamento().
+                   "<br>Data de Lançamento: ".$this->getLancamento().
                    "<br>Quantidade: ".$this->getQuantidade().
                    "<br>Preço Unitário: ".$this->getPrecoUnitario().
-                   "<br>Preço Total: ".$this->calcularTotal();
+                   "<br>Preço Total: ".$this->getTotal();
         }//fim do método imprimir
     
     
