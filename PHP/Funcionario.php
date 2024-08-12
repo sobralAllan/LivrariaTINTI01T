@@ -40,8 +40,9 @@
 
         public function imprimir():string
         {
-            parent::imprimir();
-            return "<br><br>Código: ".$this->codigo.
+            
+            return parent::imprimir().
+                   "<br><br>Código: ".$this->codigo.
                    "<br>Cargo: ".$this->cargo.
                    "<br>Salário: ".$this->salario.
                    "<br>Setor: ".$this->setor;

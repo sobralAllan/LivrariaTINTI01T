@@ -14,6 +14,7 @@
     Use Projeto\ProjetoLivrariaTINT01T\PHP\Funcionario;
     Use Projeto\ProjetoLivrariaTINT01T\PHP\Reserva;
 
+    
 
     //Instanciando um objeto da classe pessoa / Cadastrando
     $pessoa1 = new Pessoa("12345678910", 
@@ -42,23 +43,29 @@
 
     echo $livro1->imprimir();
 
-    $compra1 = new Compra(
-        1,
-        "Livro Romeu e Julieta",
-        10,
-        150
-    );
-
-    echo $compra1->imprimir();
+    
 
     $func1 = new Funcionario(
                     1,
+                    "123414",
                     "Allan",
+                    "rara",
+                    "Rua",
                     "Vendedor",
                     2500,
                     "Comercial"
                     );
     echo $func1->imprimir();
+
+    $cliente1 = new Cliente(
+        1,
+        "124",
+        "Allan",
+        "telefone",
+        "rua",
+        1000
+    );
+    echo $cliente1->imprimir();
 
     $reserva1 = new Reserva(
                     1,
@@ -68,7 +75,15 @@
     );//fim do método
 
     echo $reserva1->imprimir();
-
+    $compra1 = new Compra(
+                1, 
+                $livro1,
+                10,
+                100,
+                $cliente1,
+                $func1
+                );
+    echo $compra1->imprimir();
 
 
 

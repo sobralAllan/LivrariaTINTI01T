@@ -18,7 +18,7 @@
         {
             parent::__construct($cpf, $nome, $telefone, $endereco);
             $this->codigo      = $codigo;
-            $this->totalcompra = $total;
+            $this->totalCompra = $totalCompra;
         }//fim do construtor
 
         public function __get(string $name):mixed
@@ -33,8 +33,9 @@
 
         public function imprimir():string
         {
-            parent::imprimir();
-            return  "<br>Código: ".$this->codigo.
+            
+            return  parent::imprimir().
+                    "<br>Código: ".$this->codigo.
                     "<br>Total de Compras: ".$this->totalCompra;
         }//fim do imprimir
 

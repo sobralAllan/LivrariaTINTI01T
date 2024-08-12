@@ -23,7 +23,7 @@
             int $quantidadeCompra,
             float $totalCompra,
             Cliente $cliente,
-            Funcioario $funcinario)
+            Funcionario $funcionario)
         {
             $this->codigoCompra = $codigoCompra;
             $this->livro = $livro;
@@ -46,10 +46,10 @@
         public function imprimir():string
         {
             return "<br><br>Código Compra: ".$this->codigoCompra.
-                   "<br>Livro: ".$livro->imprimir().
+                   "<br>Livro: ".$this->livro->imprimir().
                    "<br>Total: ".$this->totalCompra.
-                   "<br>Cliente: ".$cliente->imprimir().
-                   "<br>Funcionário: ".$funcionario->imprimir();
+                   "<br>Cliente: ".$this->cliente->imprimir().
+                   "<br>Funcionário: ".$this->funcionario->imprimir();
         }//fim do método
 
 
