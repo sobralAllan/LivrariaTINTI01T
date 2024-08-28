@@ -33,7 +33,7 @@
 
         public function imprimir():string
         {
-            
+             
             return  parent::imprimir().
                     "<br>Código: ".$this->codigo.
                     "<br>Total de Compras: ".$this->totalCompra;

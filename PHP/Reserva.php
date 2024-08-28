@@ -5,19 +5,19 @@
 
     class Reserva{
         private int $codigo;
-        private string $livro;
-        private string $pessoa;
+        private Livro $livro;
+        private Cliente $cliente;
         private int $quantidade;
 
         public function __construct(
             int $codigo,
-            string $livro,
-            string $pessoa,
+            Livro $livro,
+            Cliente $cliente,
             int $quantidade
         ){
             $this->codigo     = $codigo;
             $this->livro      = $livro;
-            $this->pessoa     = $pessoa;
+            $this->cliente   = $cliente;
             $this->quantidade = $quantidade;
         }//fim do construtor
 
@@ -33,8 +33,8 @@
         public function imprimir():string
         {
             return "<br><br>Código: ".$this->codigo.
-                   "<br>Livro: ".$this->livro.
-                   "<br>Pessoa: ".$this->pessoa.
+                   "<br>Livro: ".$this->livro->imprimir().
+                   "<br>Cliente: ".$this->cliente->imprimir().
                    "<br>Quantidade: ".$this->quantidade;
         }//fim do imprimir
     }//fim da classe

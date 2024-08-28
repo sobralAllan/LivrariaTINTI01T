@@ -69,7 +69,11 @@
                 );
     echo $compra1->imprimir();
 
+    //Teste Reserva de Livros
+    $reserva1 = new Reserva(1,$livro1,$cliente1, 10);
+    echo $reserva1->imprimir();
 
-
-
+    session_start();
+    echo "<br><br>";
+    echo $_SESSION['isbn'];
 ?>
